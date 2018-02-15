@@ -1,32 +1,22 @@
 import React from "react";
-import uuid from "uuid";
 import Beginning from "./game/Beginning";
-import Shop from "./game/Shop";
-import EnterDungeon from "./game/EnterDungeon";
+import Shelf from "./game/Shelf";
+import Sofa from "./game/Sofa";
+import Door from "./game/Door";
+import Victory from "./game/Victory";
+import Death from "./game/Death";
 
 export default class GameOperator extends React.Component {
   state = {
-    events: ["beginning"]
+    events: ["beginning"],
+    start: true
   };
 
   handleAddEvent = string => {
-    if (
-      this.state.events.length < 10 &&
-      this.state.events.indexOf(string) === -1
-    ) {
-      this.setState(() => ({
-        events: [...this.state.events, string]
-      }));
-    } else if (
-      this.state.events.length >= 10 &&
-      this.state.events.indexOf(string) > -1
-    ) {
-      console.log(this.state.events);
-      this.state.events.shift();
-      this.setState(() => ({
-        events: [...this.state.events, string]
-      }));
-    }
+    this.setState(() => ({
+      events: [string],
+      start: false
+    }));
   };
 
   render() {
@@ -36,23 +26,41 @@ export default class GameOperator extends React.Component {
           switch (ev) {
             case "beginning":
               return (
-                <Beginning key={uuid()} handleAddEvent={this.handleAddEvent} />
-              );
-            case "shop":
-              return <Shop key={uuid()} />;
-            case "enter-dungeon":
-              return (
-                <EnterDungeon
-                  key={uuid()}
+                <Beginning
                   handleAddEvent={this.handleAddEvent}
+                  start={this.state.start}
+                />
+              );
+            case "shelf":
+              return <Shelf handleAddEvent={this.handleAddEvent} />;
+            case "sofa":
+              return <Sofa handleAddEvent={this.handleAddEvent} />;
+            case "door":
+              return <Door handleAddEvent={this.handleAddEvent} />;
+            case "death-excited":
+              return (
+                <Death
+                  handleAddEvent={this.handleAddEvent}
+                  deathtext="You got way too excited and had a heart attack. Oh well."
+                />
+              );
+            case "victory-easy":
+              return (
+                <Victory
+                  handleAddEvent={this.handleAddEvent}
+                  victorytext="...okay. That was pretty easy, wasn't it? Anyway, you leave the room and go home."
                 />
               );
             default:
               this.setState(() => ({
-                events: ["beginning"]
+                events: ["beginning"],
+                start: true
               }));
               return (
-                <Beginning key={uuid()} handleAddEvent={this.handleAddEvent} />
+                <Beginning
+                  handleAddEvent={this.handleAddEvent}
+                  start={this.state.start}
+                />
               );
           }
         })}

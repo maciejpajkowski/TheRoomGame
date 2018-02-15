@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
+.addendum {
+  font-size: 0.5rem;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+
+.game__element {
+  background: #ffe7b2;
+  border: 1px solid #ffc065;
+  border-radius: 10px;
+  margin: 0.6rem auto;
+  padding: 1rem;
+  position: relative;
+}
+
+.game__header {
+  margin: 0;
+  text-align: center;
+}
+
+.game__header--death {
+  color: red;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+.game__header--victory {
+  color: green;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+.game__text {
+  text-align: justify;
+}
+
+.game__question {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+
+.game__element--equipment {
+  background: #ddd;
+  border: 1px solid #bbb;
+}
+
+.game__element--start {
+  background: #89d5ff;
+  border: 1px solid #489fad;
+}
+
+.game__element--victory {
+  background: #73ff6e;
+  border: 1px solid #51b54e;
+  text-align: center;
+}
+
+.game__element--death {
+  background: #2a292b;
+  border: 1px solid #111112;
+  color: #fff;
+}
+
+.btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.3rem;
+  padding: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+.btn--crossed {
+  cursor: default;
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.btn--crossed:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 0;
+  color: #777;
+}
+
+.btn--craft {
+  background: rgba(0, 250, 0, 0.5);
+}
+
+@media all and (max-width: 1920px) {
+  .game__element {
+    width: 40%;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .game__element {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .game__element {
+    width: 75%;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .game__element {
+    width: 95%;
+  }
+}

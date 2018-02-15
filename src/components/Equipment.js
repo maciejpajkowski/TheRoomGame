@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
-export default (props) => (
-  <div className="eq-item">
-    <p>{props.count + 1}. {props.eqName}</p>
+export default props => (
+  <div>
+    <p className="equipment__item">
+      {props.count + 1}. {props.eqName}
+    </p>
   </div>
 );
