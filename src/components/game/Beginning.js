@@ -37,9 +37,11 @@ export default props => (
     <button onClick={() => props.handleAddEvent("door")} className="btn">
       Try to open the door
     </button>
-    <button onClick={() => props.handleAddEvent("sofa")} className="btn">
-      Lie down on the sofa
-    </button>
+    {!props.equipment.includes("Spring") && (
+      <button onClick={() => props.handleAddEvent("sofa")} className="btn">
+        Lie down on the sofa
+      </button>
+    )}
     <button onClick={() => props.handleAddEvent("alchemy")} className="btn">
       Move to the alchemy table
     </button>

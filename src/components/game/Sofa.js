@@ -8,8 +8,18 @@ export default props => (
     </p>
     <span className="game__question">What now?</span>
     <br />
-    <button className="btn">Take a short nap</button>
-    <button className="btn">Search the sofa for something useful</button>
+    <button className="btn" onClick={() => props.handleAddEvent("death-sleep")}>
+      Take a short nap
+    </button>
+    <button
+      className="btn"
+      onClick={() => {
+        props.handleAddEvent("sofa-search");
+        props.handleAddItem("Spring");
+      }}
+    >
+      Search the sofa for something useful
+    </button>
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
       Go back
     </button>

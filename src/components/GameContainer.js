@@ -13,6 +13,12 @@ export default class GameContainer extends React.Component {
     }));
   };
 
+  handleReset = () => {
+    this.setState(() => ({
+      equipment: []
+    }));
+  };
+
   render() {
     return (
       <div className="game-container">
@@ -20,7 +26,11 @@ export default class GameContainer extends React.Component {
           <CharacterInfo equipment={this.state.equipment} />
         </div>
         <div className="game">
-          <GameOperator equipment={this.state.equipment} />
+          <GameOperator
+            equipment={this.state.equipment}
+            handleAddItem={this.handleAddItem}
+            handleReset={this.handleReset}
+          />
         </div>
       </div>
     );

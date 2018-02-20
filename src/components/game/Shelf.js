@@ -8,7 +8,7 @@ export default props => (
     </p>
     <ul>
       <li>A small jar with an unknown substance</li>
-      <li>A little axe</li>
+      {!props.equipment.includes("Axe") && <li>A little axe</li>}
       <li>A toolbox</li>
     </ul>
     <span className="game__question">So, what are you going to do now?</span>
@@ -16,8 +16,23 @@ export default props => (
     <button className="btn" onClick={() => this.handleAddEvent("jar")}>
       Pick the jar and open it to see what's inside
     </button>
-    <button className="btn">Grab the axe</button>
-    <button className="btn">Open the toolbox</button>
+    {!props.equipment.includes("Axe") && (
+      <button
+        className="btn"
+        onClick={() => {
+          props.handleAddEvent("shelf-axe");
+          props.handleAddItem("Axe");
+        }}
+      >
+        Grab the axe
+      </button>
+    )}
+    <button
+      className="btn"
+      onClick={() => props.handleAddEvent("shelf-toolbox")}
+    >
+      Open the toolbox
+    </button>
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
       Go back
     </button>

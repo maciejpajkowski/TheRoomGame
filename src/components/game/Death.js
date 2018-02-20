@@ -9,7 +9,7 @@ export default props => (
     </p>
     <span className="game__question">Sooo... what now?</span>
     <br />
-    <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
+    <button className="btn" onClick={() => props.handleAddEvent("default")}>
       TRY AGAIN
     </button>
     <button className="btn btn--crossed" disabled>

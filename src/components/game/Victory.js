@@ -4,9 +4,7 @@ export default props => (
   <div className="game__element game__element--victory">
     <h2 className="game__header game__header--victory">YOU WIN!</h2>
     {props.victorytext && <p className="game__text">{props.victorytext}</p>}
-    <p className="game__text">
-      Congratulations! You managed to escape the room!
-    </p>
+    <p className="game__text">Congratulations! You did it!</p>
     <p className="game__text">
       You managed to escape the room and beat this dumb game!
     </p>
