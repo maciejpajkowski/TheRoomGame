@@ -9,7 +9,15 @@ export default props => (
     </p>
     <span className="game__question">What do you do?</span>
     <br />
-    <button className="btn">Take everything, I guess?</button>
+    <button
+      className="btn"
+      onClick={() => {
+        props.handleAddEvent("toolbox-picked");
+        props.handleAddItem("Gun", "Screwdriver", "Nails", "Wire");
+      }}
+    >
+      Take everything, I guess?
+    </button>
     <button className="btn" onClick={() => props.handleAddEvent("shelf")}>
       Close the toolbox
     </button>

@@ -4,6 +4,7 @@ import Beginning from "./game/Beginning";
 import Barrels from "./game/Barrels";
 import Shelf from "./game/Shelf";
 import Toolbox from "./game/shelf/Toolbox";
+import ToolboxPicked from "./game/shelf/ToolboxPicked";
 import Axe from "./game/shelf/Axe";
 import Sofa from "./game/Sofa";
 import SofaSearch from "./game/sofa/SofaSearch";
@@ -52,6 +53,14 @@ export default class GameOperator extends React.Component {
             case "shelf-toolbox":
               return (
                 <Toolbox
+                  handleAddEvent={this.handleAddEvent}
+                  handleAddItem={this.props.handleAddItem}
+                  key={uuid()}
+                />
+              );
+            case "toolbox-picked":
+              return (
+                <ToolboxPicked
                   handleAddEvent={this.handleAddEvent}
                   handleAddItem={this.props.handleAddItem}
                   key={uuid()}

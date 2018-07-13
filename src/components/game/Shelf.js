@@ -9,11 +9,11 @@ export default props => (
     <ul>
       <li>A small jar with an unknown substance</li>
       {!props.equipment.includes("Axe") && <li>A little axe</li>}
-      <li>A toolbox</li>
+      {!props.equipment.includes("Gun") && <li>A toolbox</li>}
     </ul>
     <span className="game__question">So, what are you going to do now?</span>
     <br />
-    <button className="btn" onClick={() => this.handleAddEvent("jar")}>
+    <button className="btn" onClick={() => props.handleAddEvent("jar")}>
       Pick the jar and open it to see what's inside
     </button>
     {!props.equipment.includes("Axe") && (
@@ -27,12 +27,14 @@ export default props => (
         Grab the axe
       </button>
     )}
-    <button
-      className="btn"
-      onClick={() => props.handleAddEvent("shelf-toolbox")}
-    >
-      Open the toolbox
-    </button>
+    {!props.equipment.includes("Gun") && (
+      <button
+        className="btn"
+        onClick={() => props.handleAddEvent("shelf-toolbox")}
+      >
+        Open the toolbox
+      </button>
+    )}
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
       Go back
     </button>
