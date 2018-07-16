@@ -21,7 +21,14 @@ export default props => (
     </p>
     <span className="game__question">Makes you think, eh?</span>
     <br />
-    <button className="btn">It kinda does, actually</button>
+    {props.equipment.includes("The Pickle") && (
+      <button
+        className="btn btn--craft"
+        onClick={() => props.handleAddEvent("victory-ascend")}
+      >
+        It kinda does, actually
+      </button>
+    )}
     <button className="btn" onClick={() => props.handleAddEvent("shelf")}>
       Meh, I'll just take this stuff anyway
     </button>

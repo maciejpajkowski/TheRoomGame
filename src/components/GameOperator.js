@@ -6,6 +6,7 @@ import Shelf from "./game/Shelf";
 import Toolbox from "./game/shelf/Toolbox";
 import ToolboxPicked from "./game/shelf/ToolboxPicked";
 import Axe from "./game/shelf/Axe";
+import Jar from "./game/shelf/Jar";
 import Sofa from "./game/Sofa";
 import SofaSearch from "./game/sofa/SofaSearch";
 import Door from "./game/Door";
@@ -50,6 +51,8 @@ export default class GameOperator extends React.Component {
               );
             case "shelf-axe":
               return <Axe handleAddEvent={this.handleAddEvent} key={uuid()} />;
+            case "shelf-jar":
+              return <Jar handleAddEvent={this.handleAddEvent} key={uuid()} />;
             case "shelf-toolbox":
               return (
                 <Toolbox
@@ -63,6 +66,7 @@ export default class GameOperator extends React.Component {
                 <ToolboxPicked
                   handleAddEvent={this.handleAddEvent}
                   handleAddItem={this.props.handleAddItem}
+                  equipment={this.props.equipment}
                   key={uuid()}
                 />
               );
@@ -100,7 +104,7 @@ export default class GameOperator extends React.Component {
               return (
                 <Death
                   handleAddEvent={this.handleAddEvent}
-                  deathtext="You slept so well that you entered a lucid dream inside a lucid dream inside a lucid dream inside a lucid dream inside a lucid dream inside a lucid dream. However, something went wrong and now you're in a limbo. You're pretty much dead now."
+                  deathtext="You slept so well that you entered a lucid dream inside a lucid dream inside a lucid dream inside a lucid dream inside a lucid dream inside a lucid dream. However, something went wrong and now you're in a limbo. You're pretty much a vegetable now."
                   key={uuid()}
                 />
               );
@@ -117,6 +121,14 @@ export default class GameOperator extends React.Component {
                 <Victory
                   handleAddEvent={this.handleAddEvent}
                   victorytext="...okay. That was pretty easy, wasn't it? Anyway, you leave the room and go home."
+                  key={uuid()}
+                />
+              );
+            case "victory-ascend":
+              return (
+                <Victory
+                  handleAddEvent={this.handleAddEvent}
+                  victorytext="This voice in your head somehow advised you to eat The Pickle. Shortly after eating it, you quickly realized that it does not matter what we really achieve in the physical world. It is but an introduction to a whole new, spiritual realm, which we should strive to understand and control, to become something more. You realize that trying to escape the room is futile, thus you begin to meditate. After 5214 hours of meditating you achieve a complete spiritual form and are able to just walk through the room's wall. You are free, not only from the room, but physical boundaries altogether. You're pretty much a superhuman now."
                   key={uuid()}
                 />
               );
