@@ -12,25 +12,14 @@ export default props => (
         props.equipment.includes("Gun") && (
           <p>Absolutely nothing. Haven't you taken enough?</p>
         )}
+      {!props.equipment.includes("Gun") && <li>A toolbox</li>}
+      {!props.equipment.includes("Axe") && <li>A little axe</li>}
       {!props.equipment.includes("The Pickle") && (
         <li>A small jar with an unknown substance</li>
       )}
-      {!props.equipment.includes("Axe") && <li>A little axe</li>}
-      {!props.equipment.includes("Gun") && <li>A toolbox</li>}
     </ul>
     <span className="game__question">So, what are you going to do now?</span>
     <br />
-    {!props.equipment.includes("The Pickle") && (
-      <button
-        className="btn"
-        onClick={() => {
-          props.handleAddEvent("shelf-jar");
-          props.handleAddItem("The Pickle");
-        }}
-      >
-        Pick the jar and open it to see what's inside
-      </button>
-    )}
     {!props.equipment.includes("Axe") && (
       <button
         className="btn"
@@ -48,6 +37,17 @@ export default props => (
         onClick={() => props.handleAddEvent("shelf-toolbox")}
       >
         Open the toolbox
+      </button>
+    )}
+    {!props.equipment.includes("The Pickle") && (
+      <button
+        className="btn"
+        onClick={() => {
+          props.handleAddEvent("shelf-jar");
+          props.handleAddItem("The Pickle");
+        }}
+      >
+        Pick the jar and open it to see what's inside
       </button>
     )}
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
