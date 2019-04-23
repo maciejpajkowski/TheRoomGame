@@ -1,7 +1,7 @@
 # THE ROOM
 
 The Room is a funny text game created in React (without Redux). The goal is to win, basically. However, there are multiple ways in which you can do that. 
-The game has multiple endings, both positive and negative. Can you find them all? Try it out!
+Bear in mind, though, that this game has multiple endings, both positive and negative. Can you find them all? Try it out!
 
 ## Share and improve!
 
@@ -18,4 +18,4 @@ Feel free to fork this project and add more and more improvements to it!
 
 Cheers!
 
-Matthias
+Mac
