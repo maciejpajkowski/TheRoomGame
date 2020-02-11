@@ -97,6 +97,7 @@ export default class GameOperator extends React.Component {
                   key={uuid()}
                 />
               );
+
             case "sofa":
               return (
                 <Sofa
