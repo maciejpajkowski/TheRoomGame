@@ -2,12 +2,14 @@ import React from "react";
 import uuid from "uuid";
 import Beginning from "./game/Beginning";
 import Barrels from "./game/Barrels";
+import AlchemyTable from "./game/AlchemyTable";
 import Shelf from "./game/Shelf";
 import Toolbox from "./game/shelf/Toolbox";
 import ToolboxPicked from "./game/shelf/ToolboxPicked";
 import Axe from "./game/shelf/Axe";
 import Jar from "./game/shelf/Jar";
 import Safe from "./game/Safe";
+import SafeClues from "./game/safe/SafeClues";
 import Sofa from "./game/Sofa";
 import SofaSearch from "./game/sofa/SofaSearch";
 import Door from "./game/Door";
@@ -38,6 +40,14 @@ export default class GameOperator extends React.Component {
                   handleAddEvent={this.handleAddEvent}
                   equipment={this.props.equipment}
                   start={this.state.start}
+                  key={uuid()}
+                />
+              );
+            case "alchemy":
+              return (
+                <AlchemyTable
+                  handleAddEvent={this.handleAddEvent}
+                  equipment={this.props.equipment}
                   key={uuid()}
                 />
               );
@@ -79,6 +89,15 @@ export default class GameOperator extends React.Component {
                   key={uuid()}
                 />
               );
+            case "safe-clues":
+              return (
+                <SafeClues
+                  handleAddEvent={this.handleAddEvent}
+                  handleAddItem={this.props.handleAddItem}
+                  key={uuid()}
+                />
+              );
+
             case "sofa":
               return (
                 <Sofa
