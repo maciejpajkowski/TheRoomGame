@@ -10,7 +10,14 @@ export default props => (
     </p>
     <span className="game__question">Ok, now what?</span>
     <br />
-    <button className="btn">Eat the Pickle</button>
+    {props.equipment.includes("The Pickle") && (
+      <button
+        className="btn btn--craft"
+        onClick={() => props.handleAddEvent("safe-clues-pickle")}
+      >
+        Eat the Pickle
+      </button>
+    )}
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
       Go back
     </button>

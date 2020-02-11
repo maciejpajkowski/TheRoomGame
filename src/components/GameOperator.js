@@ -2,6 +2,7 @@ import React from "react";
 import uuid from "uuid";
 import Beginning from "./game/Beginning";
 import Barrels from "./game/Barrels";
+import AlchemyTable from "./game/AlchemyTable";
 import Shelf from "./game/Shelf";
 import Toolbox from "./game/shelf/Toolbox";
 import ToolboxPicked from "./game/shelf/ToolboxPicked";
@@ -39,6 +40,14 @@ export default class GameOperator extends React.Component {
                   handleAddEvent={this.handleAddEvent}
                   equipment={this.props.equipment}
                   start={this.state.start}
+                  key={uuid()}
+                />
+              );
+            case "alchemy":
+              return (
+                <AlchemyTable
+                  handleAddEvent={this.handleAddEvent}
+                  equipment={this.props.equipment}
                   key={uuid()}
                 />
               );
