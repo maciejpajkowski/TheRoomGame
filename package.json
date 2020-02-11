@@ -1,6 +1,6 @@
 {
-  "name": "react-game",
-  "description": null,
+  "name": "the-room",
+  "description": "",
   "version": "0.0.22",
   "dependencies": {
     "react": "16.12.0",
@@ -15,5 +15,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "keywords": []
 }

@@ -94,6 +94,7 @@ export default class GameOperator extends React.Component {
                 <SafeClues
                   handleAddEvent={this.handleAddEvent}
                   handleAddItem={this.props.handleAddItem}
+                  equipment={this.props.equipment}
                   key={uuid()}
                 />
               );
