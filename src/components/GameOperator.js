@@ -30,6 +30,7 @@ export default class GameOperator extends React.Component {
           handleResetState={this.handleResetState}
           handleAddEvent={this.handleAddEvent}
           handleAddItem={this.props.handleAddItem}
+          handleRemoveItem={this.props.handleRemoveItem}
           equipment={this.props.equipment}
           start={this.state.start}
         />

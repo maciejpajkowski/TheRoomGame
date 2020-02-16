@@ -1,4 +1,4 @@
-Dodac usuwanie przedmiotow z ekwipunku
+Dodac usuwanie przedmiotow z ekwipunku - DONE (handleRemoveItem)
 
 Safe -> Enter code -> 4 inputy na jedna cyferke (1 komponent) -> 
     Po wklepaniu prawidłowego button zaswieci sie button, ze mozna otworzyc, w srodku troche zlomu i podrecznik "Mechatronics For Dummies" (1 komponent, dodaje Scrap i "Mechatronics For Dummies")

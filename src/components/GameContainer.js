@@ -13,6 +13,19 @@ export default class GameContainer extends React.Component {
     }));
   };
 
+  handleRemoveItem = (itemToRemove) => {
+    if (this.state.equipment.indexOf(itemToRemove) !== -1)
+    {
+      var array = this.state.equipment.slice(0);
+      const index = array.indexOf(itemToRemove);
+      array.splice(index, 1);
+
+      this.setState(() => ({
+        equipment: [...array]
+      }));
+    }
+  };
+
   handleReset = () => {
     this.setState(() => ({
       equipment: []
@@ -29,6 +42,7 @@ export default class GameContainer extends React.Component {
           <GameOperator
             equipment={this.state.equipment}
             handleAddItem={this.handleAddItem}
+            handleRemoveItem={this.handleRemoveItem}
             handleReset={this.handleReset}
           />
         </div>
