@@ -7,9 +7,9 @@ export default class GameContainer extends React.Component {
     equipment: []
   };
 
-  handleAddItem = item => {
+  handleAddItem = (...args) => {
     this.setState(() => ({
-      equipment: [...this.state.equipment, item]
+      equipment: [...this.state.equipment, ...args]
     }));
   };
 
