@@ -13,7 +13,7 @@ export default props => (
       TRY AGAIN
     </button>
     <button className="btn btn--crossed" disabled>
-      What? That's unfair!
+      What? This is outrageous, it's unfair!
     </button>
   </div>
 );

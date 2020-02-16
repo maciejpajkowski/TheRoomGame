@@ -1,13 +1,9 @@
 {
-<<<<<<< HEAD
-  "name": "react-game",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-=======
   "name": "the-room",
   "description": "",
->>>>>>> eeefdf2e5efb07d63c35e0a048b762d363963d26
   "version": "0.0.22",
   "dependencies": {
+    "npm": "^6.13.7",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "uuid": "3.4.0"
@@ -21,20 +17,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-<<<<<<< HEAD
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maciejpajkowski/react-game.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maciejpajkowski/react-game/issues"
-  },
-  "homepage": "https://github.com/maciejpajkowski/react-game#readme"
-}
-=======
   "keywords": []
 }
->>>>>>> eeefdf2e5efb07d63c35e0a048b762d363963d26

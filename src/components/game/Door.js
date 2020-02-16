@@ -26,7 +26,7 @@ export default props => (
       ...wait, what?
     </button>
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
-      Screw this, I'm going back
+      Nice try, I'm not falling for that!
     </button>
   </div>
 );

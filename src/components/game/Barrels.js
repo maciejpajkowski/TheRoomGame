@@ -4,14 +4,14 @@ export default props => (
   <div className="game__element">
     <h4 className="game__header">BARRELS</h4>
     <p className="game__text">
-      You approach the steel barrels. Shortly after you smell the odor coming
+      You approach the steel barrels. Shortly after you smell a familliar odor coming
       out of them - they are most likely filled with petrol.
     </p>
     <p className="game__text">
       Through a tiny, round hole on top of one of the barrels you see that it is
       filled with the liquid to the brim.
     </p>
-    <span className="game__question">So whatchu gonna do?</span>
+    <span className="game__question">What now, huh?</span>
     <br />
     <button className="btn">Spill the fuel on the room's floor</button>
     {props.equipment.includes("Axe") && (
