@@ -20,8 +20,8 @@ export default props => (
     </p>
     <p className="game__text">
       Directly to your left you see a well equipped alchemy table. To your right
-      you notice a sofa in the corner of the room. Behind your chair is nothing
-      but the room's wall.
+      you notice a very comfortable-looking sofa in the corner of the room. Behind 
+      your chair is nothing, but the room's wall.
     </p>
     <span className="game__question">What would you like to do?</span>
     <br />
