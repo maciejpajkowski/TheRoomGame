@@ -1,6 +1,6 @@
 {
   "name": "react-game",
-  "description": null,
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "version": "0.0.22",
   "dependencies": {
     "react": "16.0.0",
@@ -15,5 +15,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejpajkowski/react-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejpajkowski/react-game/issues"
+  },
+  "homepage": "https://github.com/maciejpajkowski/react-game#readme"
 }
