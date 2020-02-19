@@ -14,6 +14,11 @@ body {
   bottom: 5%;
 }
 
+.equipment__item {
+  display: inline-block;
+  margin: 16px 0 16px 0;
+}
+
 .game__element {
   background: #ffe7b2;
   border: 1px solid #ffc065;
@@ -56,6 +61,10 @@ body {
   text-align: justify;
 }
 
+.game__text--hint {
+  font-size: 3px;
+}
+
 .game__question {
   display: inline-block;
   font-weight: bold;
@@ -82,6 +91,7 @@ body {
   background: #2a292b;
   border: 1px solid #111112;
   color: #fff;
+  text-align: center;
 }
 
 .btn {

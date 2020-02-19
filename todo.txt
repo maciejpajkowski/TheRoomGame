@@ -1,17 +1,5 @@
-Dodac usuwanie przedmiotow z ekwipunku - DONE (handleRemoveItem)
-
 Safe -> Enter code -> 4 inputy na jedna cyferke (1 komponent) -> 
-    Po wklepaniu prawidłowego button zaswieci sie button, ze mozna otworzyc, w srodku troche zlomu i podrecznik "Mechatronics For Dummies" (1 komponent, dodaje Scrap i "Mechatronics For Dummies")
-Safe -> Look for clues -> Pickle -> Pojawia sie kod do wklepiania do sejfu (1 komponent)
-Barrels -> Spill fuel -> Wylanie paliwa, nic to nie daje, ale teraz śmierdzi (1 komponent, uniemozliwia zastosowanie Flask)
-Barrels -> Move aside -> Znalezienie Raspberry Pi (1 komponent, dodaje Raspberry Pi do ekwipunku)
-Barrels -> Shoot the barrel (1 komponent, potrzebny Gun) -> 
-    [DEATH] Beczka wybucha, gracz tez (1 komponent)
-Alchemy table -> Grab one flask (1 komponent, dodaje Flask do ekwipunku)
-Alchemy table -> Heat the fuel (1 komponent, potrzebny Flask with fuel) ->
-    [DEATH] Flaszka wybucha, gracz tez (1 komponent)
-Alchemy table -> Build a robot! (1 komponent, potrzebny Gun, Screwdriver, Nails, Wire, Spring, Scrap, "Mechatronics For Dummies" Raspberry Pi i The Pickle) ->
-    [WIN] Robot strzela w drzwi, udaje sie wydostac, a do tego wygrywa sie potem tym robotem kazde zawody (1 komponent)
+    Po wklepaniu prawidłowego button zaswieci sie button, ze mozna otworzyc, w srodku troche zlomu i podrecznik
+     "Mechatronics For Dummies" (1 komponent, dodaje Scrap i "Mechatronics For Dummies")
 
-
-Lacznie do dobudowania 12 komponentow
+Lacznie do dobudowania 2 komponentow

@@ -32,7 +32,7 @@ export default props => (
       Take a look at the safe
     </button>
     <button onClick={() => props.handleAddEvent("barrels")} className="btn">
-      Get to the barrels
+      Approach the barrels
     </button>
     <button onClick={() => props.handleAddEvent("door")} className="btn">
       Try to open the door

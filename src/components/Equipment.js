@@ -1,9 +1,8 @@
 import React from "react";
 
 export default props => (
-  <div>
-    <p className="equipment__item">
-      {props.count + 1}. {props.eqName}
-    </p>
-  </div>
+  <span className="equipment__item">
+    {props.count === 0 ? props.eqName : ", " + props.eqName}
+    {/* {props.count + 1}. {props.eqName} */}
+  </span>
 );

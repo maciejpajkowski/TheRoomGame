@@ -13,18 +13,38 @@ export default props => (
     </p>
     <span className="game__question">What now, huh?</span>
     <br />
-    <button className="btn">Spill the fuel on the room's floor</button>
+    <button 
+      className="btn"
+      onClick={() => props.handleAddEvent("barrels-spill")}
+    >
+      Spill the fuel on the room's floor
+    </button>
     {props.equipment.includes("Axe") && (
       <button
         className="btn btn--craft"
-        onClick={() => props.handleAddEvent("death-barrel-axe")}
+        onClick={() => props.handleAddEvent("death-barrels-axe")}
       >
         Strike the barrel with the axe
       </button>
     )}
-    <button className="btn">
+    {props.equipment.includes("Gun") && (
+      <button
+        className="btn btn--craft"
+        onClick={() => props.handleAddEvent("death-barrels-gun")}
+      >
+        Shoot the barrel with your gun
+      </button>
+    )}
+    {
+      !props.equipment.includes("Vacuum cleaner") && 
+      (<button className="btn" onClick={() => {
+      props.handleAddEvent("barrels-moveaside");
+      props.handleAddItem("Vacuum cleaner")}
+    }>
       Move the barrels aside to see what's behind them
     </button>
+    )
+    }
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
       Go back
     </button>

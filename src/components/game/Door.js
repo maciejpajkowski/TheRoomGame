@@ -13,16 +13,10 @@ export default props => (
     </p>
     <span className="game__question">And you think to yourself...</span>
     <br />
-    <button
-      className="btn"
-      onClick={() => props.handleAddEvent("death-excited")}
-    >
+    <button className="btn" onClick={() => props.handleAddEvent("death-excited")}>
       What a wonderful world!
     </button>
-    <button
-      className="btn"
-      onClick={() => props.handleAddEvent("victory-easy")}
-    >
+    <button className="btn" onClick={() => props.handleAddEvent("victory-easy")}>
       ...wait, what?
     </button>
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>
