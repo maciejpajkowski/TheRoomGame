@@ -100,6 +100,23 @@ body {
   text-align: center;
 }
 
+.game__element--input {
+  display: inline-block;
+  box-shadow: inset #aaa 1px 1px 5px 1px;
+  width: 45px;
+  font-size: 20px;
+  border: 1px solid #666;
+  background-color: #fefefe;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.game__input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .btn {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(0, 0, 0, 0.4);

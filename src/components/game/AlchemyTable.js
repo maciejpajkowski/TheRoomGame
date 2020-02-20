@@ -9,7 +9,7 @@ export default props => (
     </p>
     <span className="game__question">Wanna do something?</span>
     <br />
-    {!props.equipment.includes("Flask") && (<button
+    {!props.equipment.includes("Flask") && !props.equipment.includes("Fuel") && (<button
       className="btn"
       onClick={() => {
         props.handleAddEvent("alchemy-flask");
@@ -19,10 +19,10 @@ export default props => (
       Grab a flask from the table
     </button>
     )}
-    {props.equipment.includes("Flask with fuel") && (
+    {props.equipment.includes("Fuel") && (
       <button
         className="btn btn--craft"
-        onClick={() => props.handleAddEvent("death-alchemy-flaskwithfuel")}
+        onClick={() => props.handleAddEvent("death-alchemy-fuel")}
       >
         Heat the fuel in the flask
       </button>
@@ -36,7 +36,7 @@ export default props => (
     props.equipment.includes("Scrap") && 
     props.equipment.includes("'Mechatronics For Dummies' book") && 
     props.equipment.includes("Vacuum cleaner") && 
-    props.equipment.includes("Flask with fuel") && 
+    props.equipment.includes("Fuel") && 
     (
       <button
         className="btn btn--craft"

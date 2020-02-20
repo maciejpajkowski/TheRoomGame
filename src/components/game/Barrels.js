@@ -35,6 +35,18 @@ export default props => (
         Shoot the barrel with your gun
       </button>
     )}
+    {props.equipment.includes("Flask") && !props.equipment.includes("Fuel") && (
+      <button
+        className="btn btn--craft"
+        onClick={() => {
+          props.handleAddItem("Fuel");
+          props.handleAddEvent("barrels-fillflask");
+          
+        }}
+      >
+        Fill the flask with fuel
+      </button>
+    )}
     {
       !props.equipment.includes("Vacuum cleaner") && 
       (<button className="btn" onClick={() => {

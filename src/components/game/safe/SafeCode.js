@@ -6,11 +6,11 @@ export default props => (
     <p className="game__text">
         There's a small keypad on the safe's door. Apparently, 4 digits are needed to open the safe.
     </p>
-    <div>
-        <input id="safe-input-1" type="text" pattern="\d*" maxLength="1" />
-        <input id="safe-input-2" type="text" pattern="\d*" maxLength="1" />
-        <input id="safe-input-3" type="text" pattern="\d*" maxLength="1" />
-        <input id="safe-input-4" type="text" pattern="\d*" maxLength="1" />
+    <div className="game__input-container">
+        <input className="game__element--input" id="safe-input-1" type="text" pattern="\d*" maxLength="1" />
+        <input className="game__element--input" id="safe-input-2" type="text" pattern="\d*" maxLength="1" />
+        <input className="game__element--input" id="safe-input-3" type="text" pattern="\d*" maxLength="1" />
+        <input className="game__element--input" id="safe-input-4" type="text" pattern="\d*" maxLength="1" />
     </div>
     <span className="game__question">Aaand?</span>
     <br />

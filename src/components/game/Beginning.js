@@ -28,9 +28,12 @@ export default props => (
     <button onClick={() => props.handleAddEvent("shelf")} className="btn">
       Check out what's on the shelf
     </button>
-    <button onClick={() => props.handleAddEvent("safe")} className="btn">
-      Take a look at the safe
-    </button>
+    {!props.equipment.includes("Scrap") && !props.equipment.includes("'Mechatronics For Dummies' book") && (
+      <button onClick={() => props.handleAddEvent("safe")} className="btn">
+        Take a look at the safe
+      </button>
+    )}
+    
     <button onClick={() => props.handleAddEvent("barrels")} className="btn">
       Approach the barrels
     </button>

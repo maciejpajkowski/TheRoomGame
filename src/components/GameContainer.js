@@ -21,7 +21,7 @@ export default class GameContainer extends React.Component {
       array.splice(index, 1);
 
       this.setState(() => ({
-        equipment: [...array]
+        equipment: array
       }));
     }
   };

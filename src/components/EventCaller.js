@@ -8,6 +8,7 @@ import MoveAside from "./game/barrels/MoveAside";
 import Spill from "./game/barrels/Spill"
 import AlchemyTable from "./game/AlchemyTable";
 import Flask from "./game/alchemy/Flask";
+import FlaskFill from "./game/alchemy/FlaskFill";
 import Shelf from "./game/Shelf";
 import Toolbox from "./game/shelf/Toolbox";
 import ToolboxPicked from "./game/shelf/ToolboxPicked";
@@ -95,6 +96,7 @@ export default props => {
           <Safe
             handleAddEvent={props.handleAddEvent}
             handleAddItem={props.handleAddItem}
+            equipment={props.equipment}
             key={uuid()}
           />
         );
@@ -153,6 +155,7 @@ export default props => {
           <Barrels
             handleAddEvent={props.handleAddEvent}
             handleAddItem={props.handleAddItem}
+            handleRemoveItem={props.handleRemoveItem}
             equipment={props.equipment}
             key={uuid()}
           />
@@ -162,6 +165,15 @@ export default props => {
         return (
           <MoveAside
             handleAddEvent={props.handleAddEvent}
+            key={uuid()}
+          />
+        );
+
+      case "barrels-fillflask":
+        return (
+          <FlaskFill
+            handleAddEvent={props.handleAddEvent}
+            handleRemoveItem={props.handleRemoveItem}
             key={uuid()}
           />
         );
@@ -222,7 +234,7 @@ export default props => {
         />
       );
 
-      case "death-alchemy-flaskwithfuel":
+      case "death-alchemy-fuel":
         return (
           <Death
             handleAddEvent={props.handleAddEvent}
@@ -253,7 +265,7 @@ export default props => {
         return (
           <Victory
             handleAddEvent={props.handleAddEvent}
-            victorytext="You combined pretty much everything you have found into an awesome robot. You order it to shoot the door, and thanks to your newly acquired godly skills of robot-building, the shot is so powerful it pretty much disintegrates everything on its path. You are free, and now you also have a god damn powerful robot! You win all the robot arenas and pretty much won life. Congrats!"
+            victorytext="You combined pretty much everything you have found into an awesome robot. You order it to shoot the door, and thanks to your newly acquired godly skills of robot-building, the shot is so powerful it pretty much disintegrates everything on its path. You are free, and now you also have a god damn powerful robot! Congrats!"
             key={uuid()}
           />
         );
