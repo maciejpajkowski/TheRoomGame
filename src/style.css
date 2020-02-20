@@ -16,7 +16,13 @@ body {
 
 .equipment__item {
   display: inline-block;
-  margin: 16px 0 16px 0;
+  background-color: #eee;
+  border: 1px solid #888;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  box-shadow: 1px 1px 10px #ddd;
 }
 
 .game__element {
@@ -29,7 +35,7 @@ body {
 }
 
 .game__header {
-  margin: 0;
+  margin: 0 0 10px 0;
   text-align: center;
 }
 

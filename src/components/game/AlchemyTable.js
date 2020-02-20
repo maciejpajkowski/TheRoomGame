@@ -34,7 +34,7 @@ export default props => (
     props.equipment.includes("Wire") && 
     props.equipment.includes("Spring") && 
     props.equipment.includes("Scrap") && 
-    props.equipment.includes("'Mechatronics for Dummies' book") && 
+    props.equipment.includes("'Mechatronics For Dummies' book") && 
     props.equipment.includes("Vacuum cleaner") && 
     props.equipment.includes("Flask with fuel") && 
     (
@@ -42,7 +42,7 @@ export default props => (
         className="btn btn--craft"
         onClick={() => props.handleAddEvent("victory-alchemy-buildrobot")}
       >
-        BUILD A ROBOT!!!
+        BUILD A F***ING ROBOT!
       </button>
     )}
     <button className="btn" onClick={() => props.handleAddEvent("beginning")}>

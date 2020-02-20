@@ -7,7 +7,7 @@ export default class CharacterInfo extends React.Component {
       <div className="game__element game__element--equipment">
         <h2 className="game__header">Equipment</h2>
         {this.props.equipment.length === 0 && (
-          <p className="game__text">Your equipment is empty.</p>
+          <span className="game__text">Your equipment is empty.</span>
         )}
         {this.props.equipment.map((element, index) => (
           <Equipment key={element} eqName={element} count={index} />

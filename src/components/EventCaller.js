@@ -16,6 +16,8 @@ import Jar from "./game/shelf/Jar";
 import Safe from "./game/Safe";
 import SafeClues from "./game/safe/SafeClues";
 import SafePickle from "./game/safe/SafePickle";
+import SafeCode from "./game/safe/SafeCode";
+import SafeOpen from "./game/safe/SafeOpen";
 import Sofa from "./game/Sofa";
 import SofaSearch from "./game/sofa/SofaSearch";
 import Door from "./game/Door";
@@ -111,6 +113,23 @@ export default props => {
       return (
         <SafePickle
           handleAddEvent={props.handleAddEvent}
+          key={uuid()}
+        />
+      );
+
+      case "safe-code":
+      return (
+        <SafeCode
+          handleAddEvent={props.handleAddEvent}
+          key={uuid()}
+        />
+      );
+
+      case "safe-open":
+      return (
+        <SafeOpen
+          handleAddEvent={props.handleAddEvent}
+          handleAddItem={props.handleAddItem}
           key={uuid()}
         />
       );

@@ -9,7 +9,9 @@ export default props => (
     </p>
     <span className="game__question">Any thoughts?</span>
     <br />
-    <button className="btn">Enter a code</button>
+    <button className="btn" onClick={() => props.handleAddEvent("safe-code")}>
+      Enter a code
+    </button>
     <button className="btn" onClick={() => props.handleAddEvent("safe-clues")}>
       Look for clues on the safe
     </button>
