@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5b99dfae-d466-478e-8bf0-3766896549c6/deploy-status)](https://app.netlify.com/sites/the-room-game/deploys)
+
 # THE ROOM
 
 The Room is a funny text game created in React (without Redux). The goal is to win, basically. However, there are multiple ways in which you can do that. 
@@ -19,3 +21,6 @@ Feel free to fork this project and add more and more improvements to it!
 Cheers!
 
 Mac
+
+DEPLOYED VERSION:
+https://the-room-game.netlify.com/
