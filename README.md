@@ -13,7 +13,7 @@ to improve the game and expand it further, with more and more stories to tell, m
 
 If you are a beginner with React, it is a cool opportunity for you to test and polish your skills!
 Furthermore, you might even want to improve the entire infrastructure of the code, which in its current state is not that great, really.
-In fact, most of it has been designed before I began working as a professional dev, so it is very likely that there is a much better way to organize the code.
+In fact, most of it has been designed before I learned more advanced patterns, so it is very likely that there is a much better way to organize the code.
 If you feel like trying out your optimization skills, then this is an excellent opportunity to try and do so.
 
 Feel free to fork this project and add more and more improvements to it!
